@@ -1,3 +1,4 @@
+#Задание 1
 file = 'C:/Users/Little/Desktop/Юрченко Дарья/text_2.txt'
 file_1 = 'C:/Users/Little/Desktop/Юрченко Дарья/text_3.txt'
 #stream = open(file, mode='r', encoding=None)
