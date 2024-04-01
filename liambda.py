@@ -27,3 +27,31 @@ print(elements)
 elements.sort(key=lambda e: (e[2].lower(),e[1]))
 print(elements)
 
+#Пример 4
+c = lambda x=1, y=2, z=3: x+y+z
+print(c(5,3)) #Работа с параметрами
+
+#Пример 5
+y = lambda: 2+3
+print(y()+y()) #аргументы указывать не обязательно
+
+#Встроенные функции
+list1 = [0,1,2,3,4,5,6,7,8]
+list2 = list(filter(lambda x: x%3 == 0, list1))
+print(list2)
+#Filter принимает 2 аргумента: функцию и список для дальнейшей работы
+list3 = list(map(lambda x: x%3 == 0, list1))
+print(list3)
+#map - вернет логическое (True, False) значение выражения для каждого компонента в пределах списка
+from functools import reduce
+list4 = reduce(lambda x,y: y-x, list1)
+print(list4)
+#reduce - выбирает в качестве аргументов списка первые 2 значения, выполняет операцию и
+#возвращает значение по операции на следующий виток цикла до завершения списка (сводит элементы последовательности к
+# одному значению, принимает 2 аргумента: функцию и список)
+def add(x, y):
+    return x+y
+sum = reduce(add, list1)
+print(sum)
+
+
