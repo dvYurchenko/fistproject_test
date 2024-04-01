@@ -9,19 +9,21 @@
 #Пример 1
 x = 1
 string = lambda x: 'k' if x == 1 else 's'
+print(x)
 
 #Пример 2
 def area(b, h):
     return 0.5*b*h
 area(6, 5)
 area2 = lambda b,h: 0.5*b*h
+print(area(6, 5))
 print(area2(5, 6))
 
 #Пример 3
-elements = [(2, 12, 'Mg'), (1, 11, 'Na'), (1, 3, 'Li'), (2, 4, 'Be')]
-elements.sort(key=lambda e: (e[1], e[2]))
+elements = [(2, 12, 'Mg'), (1, 12, 'Arg'), (1, 3, 'Li'), (2, 4, 'Be')]
+elements.sort(key=lambda e: (e[0], e[2]))
 print(elements)
-elements.sort(key=lambda e: (e[1:3]))
-#elements.sort(key=lambda e: (e[2].lower(),e[1]))
+#elements.sort(key=lambda e: (e[1:3]))
+elements.sort(key=lambda e: (e[2].lower(),e[1]))
 print(elements)
 
